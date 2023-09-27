@@ -5,8 +5,7 @@
 }
 
 div{
-    margin-top: 100
-     px;
+    margin-top: 100px;
     display: block;
     text-align:center;
     height: auto;
@@ -16,8 +15,10 @@ div{
     color: aqua;
 
     font-size:xx-large;
+    text-shadow: 5px 0px  20px white;
 }
 
 #idate {
     color: aqua;
+    text-shadow: 5px 0px  20px white;
 } 

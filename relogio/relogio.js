@@ -10,7 +10,7 @@ function updateTime(){
 
     document.getElementById("idate").innerHTML =
     zeroPadding(agora.getDate(), 2) + "-" +
-    zeroPadding(agora.getMonth(), 1, 2) + "-" +     
+    zeroPadding(agora.getMonth(),  2) + "-" +     
     agora.getFullYear() + " " +
     WEEK[agora.getDay(0)];
         

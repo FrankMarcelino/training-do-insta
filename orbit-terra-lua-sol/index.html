@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Animação da orbita da terra e lua</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: black;
+            overflow: hidden;
+        }
+
+        .container{
+            font-size: 10px;
+            width: 400px;
+            height: 400px;
+            position: relative;
+        }
+
+        .sol{
+            position: absolute;
+            top: 150px;
+            left: 150px;
+            width: 150px;
+            height: 100px;
+            background-color: yellow;
+            border-radius: 50%;
+            box-shadow: 0 0 30px white;
+        }
+
+        .terra,
+        .lua {
+            position: absolute;
+            border-style: solid;
+            border-color: white transparent transparent transparent;
+            border-width: 0.1em 0.1em 0 0;
+            border-radius: 50%;
+        }
+
+        .terra {
+            top: 50px;
+            left: 50px;
+            width: 300px;
+            height: 300px;
+            animation: orbit 36.5s linear infinite; 
+        }
+
+        .lua {
+            top: 0;
+            right: 0;
+            width: 80px;
+            height: 80px;
+            animation: orbit 2.7s linear infinite;
+        }
+
+        .terra::before,
+        .lua::before {
+            content: "";
+            position: absolute;
+            border-radius: 50%;¨
+        }
+
+        .terra::before {
+            top: 28px;
+            right: 28px;
+            width: 30px;
+            height: 30px;
+            background-color: aqua;
+
+        }
+
+        .lua::before {
+            top: 0.8em;
+            right: 0.2em;
+            width: 1.2em;
+            height: 1.2em;
+            background-color: silver;
+        }
+
+        @keyframes orbit {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sol"></div>
+        <div class="terra">
+            <div class="lua"></div>
+        </div>
+
+    </div>
+</body>
+</html>
