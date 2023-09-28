@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teset de tempode reação</title>
+    <style></style>
+</head>
+<body>
+    <h1>Teste seu tempo de reação!</h1>
+    <p id="iEscrevaTempoReação"></p>
+    <div id="box"></div>
+
+    <script type="text/javascript">
+        function getRandomColor() {
+            var cartas = "0123456789ABCDEF", split("");
+            var cor = "#"
+            for (var i = 0; i < 6; i++){
+                color += cartas[Math.round(Marth.random() * 15)];
+            }
+            return color;
+
+            var clicouVezes;
+            var criouVezes;
+            var reagiuVezes;
+
+            function makeBox() {
+                var vezes = Math.random();
+                vezes = vezes * 3000;
+
+                setTimeout(function () {
+                    if (Math.random() > 0.5){
+                        document.getElementById("box").style.borderRadius = "100px";
+                    } else {
+                        document.getElementById("box").style.borderRadius = "0";
+                    }
+
+                    var top = Math.random() * 300;
+                    var left = Math.random() * 500;
+
+                    document.getElementById("box").style.top = top + "px";
+                    document.getElementById("box").style.left = left + "px";
+                    document.getElementById("box").style.backgroundColor = getRandomColor();
+                    document.getElementById("box").style.display = "block";
+
+                    createdTime = Date.now();
+                }, time);
+            }
+
+            document.getElementById("box").onclick
+        }
+    </script>
+</body>
+</html>
